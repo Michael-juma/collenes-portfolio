@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collense Elijah Savalla - Beauty Therapy Portfolio</title>
+    
+     Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+     Google Fonts 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+     Font Awesome for Icons 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+     Custom CSS 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     Navigation 
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-name">Collense Savalla</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-contact" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     Hero Section 
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="/placeholder.svg?height=800&width=1920" alt="Beauty Therapy" class="hero-image">
+        <div class="hero-content">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title animate-fade-in">Collense Elijah Savalla</h1>
+                        <p class="hero-subtitle animate-fade-in-delay">Transforming Beauty, One Treatment at a Time</p>
+                        <p class="hero-description animate-fade-in-delay-2">Beauty Therapy Student at Ashley Beauty College</p>
+                        <a href="#contact" class="btn btn-hero animate-fade-in-delay-3">Book a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     About Section 
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/placeholder.svg?height=600&width=600" alt="Collense Savalla" class="about-image img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="title-underline"></div>
+                        <p class="about-text">
+                            Hello! I'm Collense Elijah Savalla, a passionate beauty therapy student at Ashley Beauty College. My journey in the beauty industry has been driven by a deep commitment to helping people feel confident and beautiful in their own skin.
+                        </p>
+                        <p class="about-text">
+                            Through my studies, I've developed expertise in various beauty therapy techniques, from rejuvenating facials to professional makeup application. I believe that beauty therapy is not just about aesthetics—it's about creating a holistic experience that nurtures both body and mind.
+                        </p>
+                        <p class="about-text">
+                            My approach combines technical skill with genuine care for each client's unique needs. I'm dedicated to staying current with the latest beauty trends and techniques to provide the best possible service.
+                        </p>
+                        <div class="about-stats mt-4">
+                            <div class="row">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="stat-item">
+                                        <i class="fas fa-graduation-cap stat-icon"></i>
+                                        <h4 class="stat-number">Certified</h4>
+                                        <p class="stat-label">Training</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="stat-item">
+                                        <i class="fas fa-heart stat-icon"></i>
+                                        <h4 class="stat-number">50+</h4>
+                                        <p class="stat-label">Happy Clients</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="stat-item">
+                                        <i class="fas fa-spa stat-icon"></i>
+                                        <h4 class="stat-number">100+</h4>
+                                        <p class="stat-label">Treatments</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="stat-item">
+                                        <i class="fas fa-star stat-icon"></i>
+                                        <h4 class="stat-number">5.0</h4>
+                                        <p class="stat-label">Rating</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Skills/Services Section 
+    <section id="skills" class="skills-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">My Services</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">Specialized beauty therapy treatments tailored to your needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Facials" class="service-image">
+                            <div class="service-overlay">
+                                <i class="fas fa-spa service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Facials</h3>
+                            <p class="service-description">
+                                Rejuvenating facial treatments customized to your skin type. Deep cleansing, exfoliation, and hydration for a radiant glow.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Deep Cleansing</li>
+                                <li><i class="fas fa-check"></i> Anti-Aging Treatments</li>
+                                <li><i class="fas fa-check"></i> Hydration Therapy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Makeup" class="service-image">
+                            <div class="service-overlay">
+                                <i class="fas fa-paint-brush service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Makeup</h3>
+                            <p class="service-description">
+                                Professional makeup application for any occasion. From natural everyday looks to glamorous evening styles.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Bridal Makeup</li>
+                                <li><i class="fas fa-check"></i> Special Events</li>
+                                <li><i class="fas fa-check"></i> Makeup Lessons</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Massage" class="service-image">
+                            <div class="service-overlay">
+                                <i class="fas fa-hands service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Massage</h3>
+                            <p class="service-description">
+                                Therapeutic massage techniques to relieve tension and promote relaxation. Tailored to your specific needs.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Relaxation Massage</li>
+                                <li><i class="fas fa-check"></i> Facial Massage</li>
+                                <li><i class="fas fa-check"></i> Aromatherapy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Skincare" class="service-image">
+                            <div class="service-overlay">
+                                <i class="fas fa-leaf service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Skincare</h3>
+                            <p class="service-description">
+                                Comprehensive skincare consultations and treatments. Personalized routines for healthy, glowing skin.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Skin Analysis</li>
+                                <li><i class="fas fa-check"></i> Product Recommendations</li>
+                                <li><i class="fas fa-check"></i> Treatment Plans</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Testimonials Section 
+    <section id="testimonials" class="testimonials-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Happy Customers</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">What my clients say about their experience</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="testimonial-card">
+                                            <div class="stars mb-3">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <p class="testimonial-text">
+                                                "Collense is absolutely amazing! Her facial treatment left my skin glowing for weeks. She's so knowledgeable and takes the time to understand exactly what your skin needs. I wouldn't trust anyone else with my skincare routine!"
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <img src="/placeholder.svg?height=80&width=80" alt="Sarah Johnson" class="author-image">
+                                                <div class="author-info">
+                                                    <h5 class="author-name">Sarah Johnson</h5>
+                                                    <p class="author-title">Regular Client</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="testimonial-card">
+                                            <div class="stars mb-3">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <p class="testimonial-text">
+                                                "I had Collense do my makeup for my wedding day and I looked absolutely stunning! She listened to exactly what I wanted and made me feel like a princess. All my guests were asking who did my makeup. Highly recommend!"
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <img src="/placeholder.svg?height=80&width=80" alt="Emily Chen" class="author-image">
+                                                <div class="author-info">
+                                                    <h5 class="author-name">Emily Chen</h5>
+                                                    <p class="author-title">Bridal Client</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="testimonial-card">
+                                            <div class="stars mb-3">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <p class="testimonial-text">
+                                                "The massage therapy session was incredibly relaxing. Collense has such a gentle touch and creates the most calming atmosphere. I left feeling completely rejuvenated. She's a true professional!"
+                                            </p>
+                                            <div class="testimonial-author">
+                                                <img src="/placeholder.svg?height=80&width=80" alt="Maria Rodriguez" class="author-image">
+                                                <div class="author-info">
+                                                    <h5 class="author-name">Maria Rodriguez</h5>
+                                                    <p class="author-title">Spa Client</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Contact Section 
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">Ready to book your appointment? Let's connect!</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="service" class="form-label">Service Interested In</label>
+                                <select class="form-select" id="service" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="facials">Facials</option>
+                                    <option value="makeup">Makeup</option>
+                                    <option value="massage">Massage</option>
+                                    <option value="skincare">Skincare Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                        <div id="formSuccess" class="alert alert-success mt-4" style="display: none;">
+                            <i class="fas fa-check-circle"></i> Thank you for your message! I'll get back to you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="footer-text mb-0">&copy; 2025 Collense Elijah Savalla. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     Bootstrap JS 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+     Custom JS 
+    <script src="script.js"></script>
+</body>
+</html>
