@@ -131,6 +131,105 @@ window.addEventListener("scroll", () => {
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 tooltipTriggerList.map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl))
 
+// Testimonial Form Logic
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialForm = document.getElementById("testimonialForm");
+  const testimonialImageInput = document.getElementById("testimonialImage");
+  const testimonialImagePreview = document.getElementById("testimonialImagePreview");
+  const testimonialFormSuccess = document.getElementById("testimonialFormSuccess");
+  const carouselTestimonials = document.getElementById("carouselTestimonials");
+  const testimonialList = document.getElementById("testimonialList");
+
+  // Image preview
+  testimonialImageInput.addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        testimonialImagePreview.innerHTML = `<img src="${ev.target.result}" alt="Preview" class="author-image" style="max-width:80px; border-radius:50%;">`;
+      };
+      reader.readAsDataURL(file);
+    } else {
+      testimonialImagePreview.innerHTML = "";
+    }
+  });
+
+  // Form submission
+  testimonialForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("testimonialName").value;
+    const service = document.getElementById("testimonialService").value;
+    const text = document.getElementById("testimonialText").value;
+    const imageFile = testimonialImageInput.files[0];
+
+    if (!name || !service || !text || !imageFile) return;
+
+    // Read image as base64
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+      // Create new testimonial carousel item
+      // Add to carousel if exists
+      if (carouselTestimonials) {
+        const newItem = document.createElement("div");
+        newItem.className = "carousel-item";
+        newItem.innerHTML = `
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="testimonial-card">
+                <div class="stars mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">${text.replace(/</g, "&lt;")}</p>
+                <div class="testimonial-author">
+                  <img src="${ev.target.result}" alt="${name}" class="author-image">
+                  <div class="author-info">
+                    <h5 class="author-name">${name}</h5>
+                    <p class="author-title">${service}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        // Remove 'active' from all items, add to new
+        const items = carouselTestimonials.querySelectorAll('.carousel-item');
+        items.forEach(item => item.classList.remove('active'));
+        newItem.classList.add('active');
+        carouselTestimonials.appendChild(newItem);
+      }
+
+      // Add to testimonial list below form
+      if (testimonialList) {
+        const card = document.createElement("div");
+        card.className = "testimonial-card mb-3 p-3 border rounded bg-white";
+        card.innerHTML = `
+          <div class="d-flex align-items-center mb-2">
+            <img src="${ev.target.result}" alt="${name}" class="author-image me-3" style="width:60px; height:60px; object-fit:cover; border-radius:50%;">
+            <div>
+              <h5 class="mb-0">${name}</h5>
+              <small class="text-muted">${service}</small>
+            </div>
+          </div>
+          <p class="testimonial-text mb-0">${text.replace(/</g, "&lt;")}</p>
+        `;
+        testimonialList.prepend(card);
+      }
+
+      // Show success message
+      testimonialFormSuccess.style.display = "block";
+      testimonialForm.reset();
+      testimonialImagePreview.innerHTML = "";
+      setTimeout(() => {
+        testimonialFormSuccess.style.display = "none";
+      }, 4000);
+    };
+    reader.readAsDataURL(imageFile);
+  });
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
