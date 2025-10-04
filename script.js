@@ -131,4 +131,34 @@ window.addEventListener("scroll", () => {
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 tooltipTriggerList.map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl))
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stat-number");
+  const colors = ["text-primary", "text-success", "text-warning", "text-danger", "text-info"];
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      let count = +counter.innerText;
+
+      const increment = target / 100; // speed control
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        
+        // Random Bootstrap text color effect
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        counter.className = "stat-number " + randomColor;
+
+        setTimeout(updateCount, 50); // adjust speed
+      } else {
+        counter.innerText = target + (target >= 50 ? "+" : ""); // Add "+" for large numbers
+      }
+    };
+
+    updateCount();
+  });
+});
+
 console.log("[v0] Portfolio website initialized successfully")
