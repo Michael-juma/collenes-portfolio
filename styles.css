@@ -765,3 +765,113 @@ html {
   color: var(--secondary-color);
   transform: scale(1.2);
 }
+
+/* Additional responsive improvements */
+@media (max-width: 992px) {
+  .hero-section {
+    background-position: center top;
+    background-attachment: scroll;
+    min-height: 60vh;
+    height: auto;
+    padding: 5rem 0 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .service-image-wrapper {
+    height: 220px;
+  }
+
+  .btn-contact {
+    padding: 0.45rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ensure hero doesn't get hidden behind fixed navbar */
+  body {
+    padding-top: 70px;
+  }
+
+  .hero-section {
+    background-attachment: scroll;
+    min-height: 55vh;
+    padding: 4.5rem 0 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .service-image-wrapper {
+    height: 180px;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-author {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .author-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-profile-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 64px;
+  }
+
+  .hero-section {
+    min-height: 50vh;
+    padding: 3.5rem 0 2rem;
+    background-position: center top;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .service-image-wrapper {
+    height: 140px;
+  }
+
+  .service-content {
+    padding: 1rem;
+  }
+
+  .btn-hero,
+  .btn-primary {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .footer-contact-item {
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+  }
+}
+
+/* Make images and embedded assets fully responsive */
+img,
+picture,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
