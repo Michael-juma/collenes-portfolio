@@ -89,11 +89,12 @@ html {
   justify-content: center;
   overflow: hidden;
   /* Added background image directly to hero section */
-  background-image: url("https://images.pexels.com/photos/7446693/pexels-photo-7446693.jpeg");
+  background-image: url("https://i.pinimg.com/736x/08/3e/5b/083e5b91232625c90bfe52dc2859eb44.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* Use scroll attachment for mobile compatibility (fixed often hides backgrounds on mobile) */
+  background-attachment: scroll;
 }
 
 /* Added dark overlay for better text visibility */
