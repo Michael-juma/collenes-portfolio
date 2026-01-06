@@ -48,6 +48,19 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     message,
   })
 
+  // Prepare WhatsApp message and open chat with predefined number
+  try {
+    const waNumber = "254704512567"; // international format without + (Kenya)
+    // Build a readable message using newlines; encodeURIComponent will handle encoding
+    const waText = `*New contact form submission*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Service:* ${service}\n*Message:* ${message}`;
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
+
+    // Open WhatsApp in new tab/window (mobile will open the app if available)
+    window.open(waUrl, "_blank", "noopener,noreferrer")
+  } catch (err) {
+    console.warn("Could not open WhatsApp link:", err)
+  }
+
   // Show success message
   const successAlert = document.getElementById("formSuccess")
   successAlert.style.display = "block"
